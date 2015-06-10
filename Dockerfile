@@ -1,6 +1,6 @@
 
 # Builds a docker gui image
-FROM hurricane/dockergui:xvnc
+FROM hurricane/dockergui:x11rdp1.2
 
 MAINTAINER aptalca
 
@@ -34,7 +34,11 @@ echo 'deb http://archive.ubuntu.com/ubuntu trusty-updates main universe restrict
 # Install packages needed for app
 export DEBCONF_NONINTERACTIVE_SEEN=true DEBIAN_FRONTEND=noninteractive && \
 apt-get update && \
-apt-get install -y ImageMagick && \
+apt-get install -y ImageMagick python-xdg && \
+
+# link dri to usr/lib
+ln -s /opt/X11rdp/lib/dri /usr/lib/dri && \
+
 #########################################
 ##          GUI APP INSTALL            ##
 #########################################
