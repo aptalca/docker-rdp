@@ -38,6 +38,9 @@ apt-get install -y ImageMagick && \
 apt-get install -y --force-yes --no-install-recommends fonts-wqy-microhei && \
 apt-get install -y --force-yes --no-install-recommends ttf-wqy-zenhei && \
 
+apt-get install -y --force-yes --no-install-recommends fcitx-rime && \
+
+
 #########################################
 ##          GUI APP INSTALL            ##
 #########################################
