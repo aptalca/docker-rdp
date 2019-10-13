@@ -35,6 +35,13 @@ echo 'deb http://archive.ubuntu.com/ubuntu trusty-updates main universe restrict
 export DEBCONF_NONINTERACTIVE_SEEN=true DEBIAN_FRONTEND=noninteractive && \
 apt-get update && \
 apt-get install -y ImageMagick && \
+apt-get install -y --force-yes --no-install-recommends fonts-wqy-microhei && \
+apt-get install -y --force-yes --no-install-recommends ttf-wqy-zenhei && \
+
+apt-get install -y --force-yes --no-install-recommends fcitx-rime && \
+apt-get install -y --force-yes --no-install-recommends xfce4 &&
+
+
 #########################################
 ##          GUI APP INSTALL            ##
 #########################################
